@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida CV - Sissa Gabriela Reyes Quiñonez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #4E342E;
+            color: white;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            background: white;
+            color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .contact-info, .links {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .contact-info a, .links a {
+            color: rgb(207, 203, 203);
+            text-decoration: none;
+            display: block;
+            margin-top: 5px;
+        }
+        .contact-info a:hover, .links a:hover {
+            text-decoration: underline;
+        }
+        .bio h2, .interests h2, .portfolio h2 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .bio p, .interests ul {
+            font-size: 14px;
+            color: #333;
+        }
+        .interests ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 30%;
+            background: #6D4C41;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sidebar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-bottom: 15px;
+        }
+        .sidebar h2 {
+            font-size: 22px;
+        }
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact-info p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            width: 70%;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        .title {
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .bio, .portfolio {
+            margin-bottom: 20px;
+        }
+        .bio h2, .portfolio h2 {
+            color: #34495e;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+        .bio p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        .interests li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        /* Portafolio */
+        .portfolio .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #6D4C41;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .portfolio .tabs div {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s;
+        }
+        .portfolio .tabs div:hover {
+            background: #8D6E63;
+        }
+        .portfolio .tabs div.active {
+            background: #3E2723;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+            padding: 15px;
+            background: #D7CCC8;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: #333;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Botones de años */
+        .year {
+            background: #bdc3c7;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .year:hover {
+            background: #95a5a6;
+        }
+        .year-content {
+            display: none;
+            padding: 5px 15px;
+            background: white;
+            border-left: 4px solid #2c3e50;
+            margin-top: 5px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+            }
+            .sidebar {
+                width: 100%;
+                padding: 20px;
+            }
+            .main-content {
+                width: 100%;
+                padding: 20px;
+            }
+            .portfolio .tabs {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Barra lateral -->
+        <div class="sidebar">
+            <img src="C:\Users\Lenovo L390\Pictures\Screenshots\Foto sissa.jpeg" alt="Foto de perfil">
+            <h2>Sissa Gabriela Reyes Quiñonez</h2>
+            <div class="contact-info">
+                <p><strong>Correo:</strong> <a href="sissagabrielaquinonez@gmail.com">sissagabrielaquinonez2@gmail.com</a></p>
+                <p><strong>Teléfono:</strong> <a href="tel:+593 978962700">+593 978 962 700</a></p>
+            </div>
+            <br>
+            <div class="links">
+                <h3>Links Externos</h3>
+                <a href="#">Formato_Hoja_De_vida.pdf</a>
+                <a href="#">CVLac Colciencias</a>
+                <a href="https://www.linkedin.com/in/gaby-reyes-qui%C3%B1onez-180a57324/">LinkedIn</a>
+            </div>
+        </div>
+
+
+        <!-- Sección Principal -->
+        <div class="main-content">
+            <div class="title">Hoja de Vida CV</div>
+
+            <div class="bio">
+                <h2>Biografía</h2>
+                <p>Ingeniera en Logística y Transporte con formación en la Universidad Politécnica Estatal del Carchi, 
+                   especializada en distribución física internacional. Poseo experiencia en el análisis de procesos logísticos, optimización de 
+                   costos y mejora en tiempos de transporte y etiquetado. Me destaco por mi enfoque orientado a resultados, capacidad para trabajar
+                   en equipo y habilidades para la resolución de problemas. Cuento con conocimientos en Excel básico, Power BI y simuladores 
+                   logísticos como Flexsim, además de competencias en programación con Python. Mi formación y experiencia me han permitido 
+                   desarrollar una visión estratégica para incrementar la eficiencia y competitividad en el sector logístico.</p>
+            </div>
+            <div class="interests">
+                <h2>Intereses Profesionales</h2>
+                <ul>
+                    <li>Power Bi</li>
+                    <li>Diseño de rutas</li>
+                    <li>Diseño asistido por computadora Auto CAD</li>
+                    <li>Sistemas de Producción</li>
+                    <li>Logística y cadena de suministro</li>
+                    <li>Distribución física internacional</li>
+                    <li>Optimización de recursos</li>
+                </ul>
+            </div>
+
+            <div class="portfolio">
+                <h2>Portafolio de Proyectos</h2>
+                <div class="tabs">
+                    <div class="tab-btn" onclick="showTab('Idiomas', this)">Idiomas</div>
+                    <div class="tab-btn" onclick="showTab('investigacion', this)">Proyectos Investigación</div>
+                    <div class="tab-btn" onclick="showTab('cursos', this)">Cursos</div>
+                    <div class="tab-btn" onclick="showTab('experiencia', this)">Experiencia</div>
+                </div>
+
+                <div id="certificado" class="tab-content active">
+                    <div class="year" onclick="toggleYear('y2024')">2024</div>
+                    <div id="y2024" class="year-content"><p>Certificado en 7mo congreso de ingenierias - (03-04 de octubre del 2024)<br>
+                                           Universidad Politécnica Estatal del Carchi </div>
+                </div>
+                <div id="Idiomas" class="tab-content"><p>Suficiencia en Inglés - B1 (08 de abril de 2022)<br>
+                    Centro de idiomas extranjeros y lenguas Nativas - Universidad Politécnica Estatal del Carchi</div>
+                <div class="tab-content">
+                </div>
+                <div id="investigacion" class="tab-content"><p>2024: Ponente en el 7° Congreso de Ingenierías<br>
+                    Análisis de la cadena logística en la comercialización del aguacate desde el Ecuador hacia mercados internacionales</div>
+                </div>
+                <div id="cursos" class="tab-content">Curso de ECUAPASS (16-24 de noviembre de 2024)<br> 
+                                                     Logica empresarial (08 de junio de 2023)</div>
+                <div id="experiencia" class="tab-content">Asistente-Bodega de lunas norte, Quito (septiembre 2024-actualidad)<br> 
+                                                          Pasante-Cosinfron S.A., Tulcan (Febrero 2024)<br> 
+                                                          Pasante-Encomiendad Ecuador, Tulcan (Marzo-Junio 2023)<br> 
+                                                          Pasante-Encomiendas Ecuador, Quito (julio-septiembre 2023)</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName, element) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        function toggleYear(yearId) {
+            let yearContent = document.getElementById(yearId);
+            yearContent.style.display = yearContent.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+
+</body>
+</html>
