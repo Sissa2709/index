@@ -203,8 +203,7 @@
                 flex-direction: column;
             }
         }
-    </style>
-</head>
+ </style>
 <body>
 
     <div class="container">
